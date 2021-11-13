@@ -1,6 +1,7 @@
 import data from "../data/mock.json";
 import React, { useState } from "react";
-
+import { Button } from 'react-bootstrap';
+import {Link} from "react-router-dom";
 
 function Home() {
 
@@ -28,7 +29,11 @@ function Home() {
           <tbody>
             {patients.map((patient) => (
               <tr>
-                <td>{patient.name.given + " " + patient.name.family}</td>
+                <td>
+                    <Link to={{pathname:"/patient", state: {example: true}}}>
+                        {patient.name.given + " " + patient.name.family}
+                    </Link>
+                </td>
                 <td>{patient.gender}</td>
                 <td>{patient.birthDate}</td>
                 <td>{patient.identifier.map((p) => p.assigner.display)}</td>
@@ -38,7 +43,14 @@ function Home() {
         </table>
         
       </div>
-      
+
+      <form>
+            <Button
+                variant="btn btn-success"
+                style={{display: "flex", alignItems:'center', justifyContent:'center', marginLeft: 580, marginTop: 250}}>
+                Add new patient
+            </Button>
+      </form>
 
     </div>
   );
