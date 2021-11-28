@@ -1,14 +1,7 @@
 package com.juniordesign.team1122.services;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-import org.springframework.http.HttpStatus;
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 
 /**
  * Class that will handle any database connection.

@@ -27,7 +27,8 @@ public class ApiController {
     }
 
     /**
-     * Add information about a patient to the database
+     * TODO: Make real call once database is set up.
+     * Add information about a patient to the database.
      * @return Json stating if the operation was successful.
      */
     @PutMapping("/api/createPatient")
