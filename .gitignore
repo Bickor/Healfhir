@@ -13,6 +13,10 @@ frontend/build
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+# Eclipe
+.classpath
+.project
+
 # Mac
 .DS_Store
 
