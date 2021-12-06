@@ -25,12 +25,12 @@ function NewPatient() {
             <form>
                 <label style={{marginLeft:50, alignSelf:"center"}}>
                     First Name:
-                    <input type="text" name="name"/>
+                    <input type="text" name="firstName"/>
                 </label>
                 
                 <label style={{marginLeft:50,alignSelf:"center"}}>
                     Last Name:
-                    <input type="text" name="name" />
+                    <input type="text" name="lastName" />
                 </label>
 
                 <label style={{marginLeft:50, alignSelf:"center"}}

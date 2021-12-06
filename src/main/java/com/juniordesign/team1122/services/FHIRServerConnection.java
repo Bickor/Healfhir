@@ -54,7 +54,7 @@ public class FHIRServerConnection {
     }
 
     @SuppressWarnings("unchecked")
-    public boolean createPatient(String name) {
+    public boolean createPatient(String name, String lastName, String gender) {
         JSONArray usualNameArray = new JSONArray();
         usualNameArray.add(name);
 
@@ -69,7 +69,7 @@ public class FHIRServerConnection {
         body.put("resourceType", "Patient");
         body.put("active", true);
         body.put("name", nameArray);
-        body.put("gender", "male");
+        body.put("gender", gender.toLowerCase());
         body.put("birthDate", "1980-01-01");
 
         final String url = "https://az-healthfhir.azurehealthcareapis.com/Patient";
