@@ -37,7 +37,7 @@ public class ApiController {
     @PutMapping("/api/createPatient")
     public ResponseEntity<String> createPatient(@RequestBody String name) {
         boolean result = fhirServerConnection.createPatient(name);
-        return new ResponseEntity<>("Successfull created patient " + name, HttpStatus.OK);
+        return new ResponseEntity<>("Successfully created patient " + name, HttpStatus.CREATED);
 //        return result ? new ResponseEntity<>("Patient created.", HttpStatus.CREATED) :
 //                new ResponseEntity<>("Something went wrong, try again.", HttpStatus.INTERNAL_SERVER_ERROR);
     }
