@@ -1,6 +1,5 @@
 package com.juniordesign.team1122.controllers;
 
-import com.juniordesign.team1122.services.DatabaseConnection;
 import com.juniordesign.team1122.services.FHIRServerConnection;
 import org.json.simple.JSONObject;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -15,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class ApiController {
 
     private FHIRServerConnection fhirServerConnection = new FHIRServerConnection(new RestTemplateBuilder());
+    
     /**
      * Get a list of all patients.
      * @return Json of all the patients.
@@ -27,7 +27,6 @@ public class ApiController {
     }
 
     /**
-     * TODO: Make real call once database is set up.
      * Add information about a patient to the database.
      * @return Json stating if the operation was successful.
      */
