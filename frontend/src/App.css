@@ -21,6 +21,14 @@
   color: white;
 }
 
+.patient-header {
+  background-color: rgb(117, 201, 250);
+  display: flex;
+  min-height: 20vh;
+  font-size: calc(5px + 2vmin);
+  color: white;
+}
+
 .App-link {
   color: #61dafb;
 }
