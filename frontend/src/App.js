@@ -127,22 +127,29 @@ function Patient() {
   return (
       
       <div>
+        
+          <header className="patient-header">
           <Link to="/">
               <Button
                   variant="btn btn-success"
                   style={{display: "flex", alignItems:'center', justifyContent:'center', marginLeft: 50, marginTop: 50}}>
-                      Home page
+                      &#8629; Home page
               </Button>
           </Link>
-
-
-          <h1 style={{marginLeft:580, marginBottom: 60}}>
+          <h1 style={{marginLeft:400, marginTop:60}}>
               Patient Information   
           </h1>
+          </header>
 
-          <h3 style={{marginLeft:50}}> First Name: {currPatient.name.given} </h3>
-          <h3 style={{marginLeft:50}}> Lastname: {currPatient.name.family} </h3>
+          <h4 style={{marginLeft:50}}> First Name: {currPatient.name.given} </h4>
+          <h4 style={{marginLeft:50}}> Lastname: {currPatient.name.family} </h4>
+          <p style={{marginLeft:50}}> Gender: {currPatient.gender} </p>
+          <p style={{marginLeft:50}}> Birthday: {currPatient.birthDate} </p>
+          <p style={{marginLeft:50}}> Healthcare Provider: {currPatient.identifier.map((p) => p.assigner.display)} </p>
+          <p style={{marginLeft:50}}> Phone: {currPatient.telecom[1].value} </p>
           <p style={{marginLeft:50}}> Address: {currPatient.address[0].text} </p>
+          <p style={{marginLeft:50}}> Emergency Contact: {currPatient.contact[0].name.given + " " + currPatient.contact[0].name.family + ": "+currPatient.contact[0].telecom[0].value} </p>
+          <p></p>
 
       </div>
   );
